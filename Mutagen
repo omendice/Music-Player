@@ -1,0 +1,14 @@
+from mutagen.easyid3 import EasyID3
+from mutagen.mp3 import MP3
+
+
+audio = EasyID3("songs/september.mp3")
+audio = MP3("songs/september.mp3")
+
+#singer = audio["artist"]
+#name = audio["title"]
+song_length = audio.info.length
+
+#print singer
+print song_length
+#print name
