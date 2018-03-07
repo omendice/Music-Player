@@ -1,0 +1,30 @@
+from mutagen.easyid3 import EasyID3
+from mutagen.mp3 import MP3
+
+
+audio = EasyID3("elevatormusic.mp3")
+audio = MP3("elevatormusic.mp3", ID3 = EasyID3)
+
+#singer = audio["artist"]
+#name = audio["title"]
+song_length = audio.info.length
+song_bitrate = audio.info.bitrate
+#print singer
+print song_length
+print song_bitrate
+#print name
+
+audio = EasyID3("elevatormusic.mp3")
+audio["title"] = "Strawberry Swing"
+audio.save()
+print audio
+
+
+
+
+
+
+
+235.389416667
+192000
+{'album': [u'nostalgia,ULTRA'], 'title': [u'Strawberry Swing'], 'artist': [u'Frank Ocean'], 'genre': [u'Odd Future'], 'encodedby': [u'iTunes 10.1.2'], 'tracknumber': [u'2/14']}
